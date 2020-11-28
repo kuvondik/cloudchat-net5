@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>StaticFiles\Images\Logos\bubble-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CloudChat.Wpf.Infrastructure\CloudChat.Wpf.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Animations\Base\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Enums\" />
+    <Folder Include="StaticFiles\Images\Icons\" />
+    <Folder Include="Styles\" />
+    <Folder Include="StaticFiles\Fonts\" />
+    <Folder Include="ViewModels\Base\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="7.1.2" />
+  </ItemGroup>
+
+</Project>
