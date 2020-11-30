@@ -7,7 +7,30 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\ExampleForm\ExampleFormView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HamburgerMenu\HamburgerMenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ExampleForm\ExampleFormView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuContent\HamburgerMenuContentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuMenuItem\HamburgerMenuMenuItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuOption\HamburgerMenuOptionView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

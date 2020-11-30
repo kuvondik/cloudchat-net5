@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudChat.Wpf", "CloudChat.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudChat.Wpf.Infrastructure", "CloudChat.Wpf.Infrastructure\CloudChat.Wpf.Infrastructure.csproj", "{5F50A55A-6431-4BC1-9BE7-4BAA2B3F3C72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudChat.Wpf.Core", "CloudChat.Wpf.Core\CloudChat.Wpf.Core.csproj", "{19B4B608-CA1E-471C-93A6-F7B9765BEF9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudChat.Wpf.Core", "CloudChat.Wpf.Core\CloudChat.Wpf.Core.csproj", "{19B4B608-CA1E-471C-93A6-F7B9765BEF9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0835CAC-C036-4FC1-B6AA-1E0D55CA41FF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>StaticFiles\Images\Logos\bubble-icon.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Images\Logos\bubble-icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\Logos\bubble-icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CloudChat.Wpf.Infrastructure\CloudChat.Wpf.Infrastructure.csproj" />
@@ -13,16 +17,56 @@
 
   <ItemGroup>
     <Folder Include="Animations\Base\" />
-    <Folder Include="Controls\" />
     <Folder Include="Enums\" />
-    <Folder Include="StaticFiles\Images\Icons\" />
+    <Folder Include="Assets\Images\Icons\" />
+    <Folder Include="Setup\" />
+    <Folder Include="ValueConverters\" />
+    <Folder Include="Themes\" />
     <Folder Include="Styles\" />
-    <Folder Include="StaticFiles\Fonts\" />
-    <Folder Include="ViewModels\Base\" />
+    <Folder Include="Assets\Fonts\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="7.1.2" />
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.3.4" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.7" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.5" />
+    <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logos\bubble-icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\HamburgerMenu\HamburgerMenuContent\HamburgerMenuContentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HamburgerMenu\HamburgerMenuMenuItem\HamburgerMenuMenuItemView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HamburgerMenu\HamburgerMenuOption\HamburgerMenuOptionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuContent\HamburgerMenuContentView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuMenuItem\HamburgerMenuMenuItemView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HamburgerMenu\HamburgerMenuOption\HamburgerMenuOptionView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
